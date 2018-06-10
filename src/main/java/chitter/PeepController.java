@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class PeepController {
-    @GetMapping("/post")
+    @GetMapping("/")
     public String peepForm(Model model) {
         model.addAttribute("peep", new Peep());
-        return "post";
+        return "index";
     }
-    @PostMapping("/post")
+    @PostMapping("/")
     public String peepSubmit(@ModelAttribute Peep peep) {
         return "peep";
     }
