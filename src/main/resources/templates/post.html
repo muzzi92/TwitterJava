@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Post A chitter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <h3>Post A Peep!</h3>
+
+    <form action="#" method="POST" th:action="@{/post}" th:object="${peep}">
+        <p>Content: <input type="text" th:field="*{content}" /></p>
+        <p><input type="submit" value="Submit" /><input type="rest" value="Reset" /></p>
+    </form>
+</body>
+</html>
